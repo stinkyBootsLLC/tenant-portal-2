@@ -13,7 +13,7 @@ volumes:
   - "./app:/var/www/html"
 
 ```
-This means YOU MUST have these files locally.
+This means YOU MUST have these files locally. **No image has been built yet**
 
 Another issue happening, is that I cannot log into the app with the CORRECT credentials.  I think there is a problem with permissions.  NOT BEING ABLE TO READ OR WRITE to the SQLite3 DB file.
 
