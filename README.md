@@ -20,6 +20,8 @@ This means YOU MUST have these files locally. **No image has been built yet**
 
 ## Getting started
 
+1. from the root directory run `docker build -t tenant-portal-2-php .`
+
 
 WIP
 

@@ -2,7 +2,7 @@ version: "2.16"
 
 services:
   apache-php:
-    image: tenant-portal-2
+    image: tenant-portal-2-php
     volumes:
       - "./app:/var/www/html"
     ports:
