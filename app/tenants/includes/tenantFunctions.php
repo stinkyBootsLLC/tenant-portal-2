@@ -14,6 +14,7 @@
 
 
             echo $userEmail." ".$hashPassword;
+            exit();
 
 
 
