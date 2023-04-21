@@ -1,0 +1,10 @@
+version: "2"
+
+services:
+  www:
+    container_name: tenant-portal
+    image: php:8.1-apache-buster
+    volumes:
+      - "./app:/var/www/html"
+    ports:
+      - 3010:80
