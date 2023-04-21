@@ -2,6 +2,21 @@
 
 SQLite Version
 
+## Troubleshooting Notes:
+
+- 4/21/2023: with current docker-compose.yml file, the application will display correctly. 
+
+Note about yml file: this line is saying, use the files from the CURRENT DIRECTORY app folder, and simulate them into the container /var/www/html. 
+
+```
+volumes:
+  - "./app:/var/www/html"
+
+```
+This means YOU MUST have these files locally.
+
+Another issue happening, is that I cannot log into the app with the CORRECT credentials.  I think there is a problem with permissions.  NOT BEING ABLE TO READ OR WRITE to the SQLite3 DB file.
+
 
 
 ## Getting started
