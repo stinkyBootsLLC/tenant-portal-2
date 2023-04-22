@@ -12,6 +12,8 @@ RUN apt-get update && \
     apt-get install -y git sqlite3 libsqlite3-dev && \
     docker-php-ext-install pdo_mysql pdo_sqlite
 
+RUN chown -R www-data:www-data /var/www/html    
+
 # Expose port 80 for Apache
 EXPOSE 80
 
