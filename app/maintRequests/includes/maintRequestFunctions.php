@@ -132,7 +132,7 @@
         WHERE TenantMaintIssue_ID = :issueID ");
         $stmt->bindValue(':issueID', $issueID, SQLITE3_INTEGER);
         $result = $stmt->execute();
-        $row = $result->fetchArray(MYSQLI_ASSOC);
+        $row = $result->fetchArray();
         if ($row["ID"] > 0){
             // assign variables
             $id = $row['ID'];
