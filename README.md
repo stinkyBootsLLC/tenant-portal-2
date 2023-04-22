@@ -38,6 +38,9 @@ Error: contact admin -- ec-69
 
   OUTPUT `-rwxr-xr-x. 1 www-data www-data 36864 Apr 22 15:03 Tenants.sqlite`
 
+  Seems to have fixed the issue, I am able to now write to db.  I checked both Tenant and Maintainer
+  
+
 
 ## Getting started
 
