@@ -26,7 +26,7 @@
             $result = $stmt->execute();
             $row = $result->fetchArray(MYSQLI_ASSOC);
 
-            var_dump($row);
+            echo $stmt;
        
             // the very first ID is 1 so 0 does not exist
             if ($row["Tenant_ID"] > 0) {  
