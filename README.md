@@ -2,6 +2,10 @@
 
 PHP (CRUD) web application to track maintenance issues for a property manager. The original MySQL version is now converted to a SQLite Version.
 
+This is a simple Create, Read, Update, and Delete (CRUD) web application. The purpose of this application, is to track maintenance issues for a property manager. Tenants can register to this application and report simple maintenance issues, up to the property manager.There is a login form for a tenant and a login form for a maintainer (manager). Once the maintainer logs in, they will be able to see all the issues reported by their Tenants. Issues are categorized in three categories, open, pending and closed.
+
+> :warning: This application is intended for academic purpose only and should not be used in a live production enviroment.
+
 ## Software Architecture
 
 - PHP 7.4
@@ -64,6 +68,14 @@ YOU MUST have these files locally. **They are NOT INCLUDED IN THE DOCKER IMAGE**
 8. Shutdown the container `docker compose down` or `docker-compose down`
 
 Then there is a problem with permission in the db directory
+
+## Application Default Credentials
+
+**Tenant:** tenant@mail.com  
+**Pass:** "1234"
+
+**Maintainer:** maint@mail.com  
+**Pass:** "1234"
 
 ## License
 
