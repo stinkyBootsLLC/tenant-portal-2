@@ -27,10 +27,7 @@ Note about the compose yml file: this line below is saying, use the files from t
 volumes:
   - "./app:/var/www/html"
 ```
-
-
 YOU MUST have these files locally. **They are NOT INCLUDED IN THE DOCKER IMAGE**
-
 
 -->
 1. From the root directory run `docker build -t tenant-portal-2-php .`
@@ -63,6 +60,8 @@ YOU MUST have these files locally. **They are NOT INCLUDED IN THE DOCKER IMAGE**
 - Note: If you receive the following error.
 
 > Warning: SQLite3Stmt::execute(): Unable to execute statement: attempt to write a readonly database in /var/www/html/tenants/includes/tenantFunctions.php on line 187 Error: contact admin -- ec-69
+
+8. Shutdown the container `docker compose down` or `docker-compose down`
 
 Then there is a problem with permission in the db directory
 
