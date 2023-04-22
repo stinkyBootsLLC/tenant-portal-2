@@ -5,10 +5,10 @@ services:
     image: tenant-portal-2-php
     volumes:
       # Persistent data
-      - db-data:/var/www/html/db
+      - tenant-db:/var/www/html/db
     restart: unless-stopped
     ports:
       - 3010:80
 
 volumes:
-  db-data:
+  tenant-db:
