@@ -77,13 +77,12 @@ This means YOU MUST have these files locally. **They are NOT INCLUDED IN THE IMA
 11. Enter Random User Security Question Validation = `'answer'`
 
 12. From the Tenant Dashboard report an issue, or view issues. (there is some dummy data include)
-    - Note: If you receive the following error.
-    >>>
 
-    Warning: SQLite3Stmt::execute(): Unable to execute statement: attempt to write a readonly database in /var/www/html/tenants/includes/tenantFunctions.php on line 187 Error: contact admin -- ec-69
-    
-    >>>
-    Then there is a problem with permission in the db directory (see step 4)
+- Note: If you receive the following error.
+
+> Warning: SQLite3Stmt::execute(): Unable to execute statement: attempt to write a readonly database in /var/www/html/tenants/includes/tenantFunctions.php on line 187 Error: contact admin -- ec-69
+
+Then there is a problem with permission in the db directory (see step 4)
 
 
 
