@@ -17,6 +17,8 @@ This means YOU MUST have these files locally. **No image has been built yet**
 
 - 4/21/2023: with current docker-compose.yml file, the application will display correctly, but I cannot log into the app with the CORRECT credentials.  I think there is a problem with permissions.  NOT BEING ABLE TO READ OR WRITE to the SQLite3 DB file.
 
+- 4/21/2023: this is killing everything in container `MYSQLI_ASSOC`
+
 
 ## Getting started
 
