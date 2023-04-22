@@ -114,9 +114,7 @@
         $db->close();
 
     }// end validateTenantAnswer()
-
-
-
+    
     function displayUserProfile(){
         // get the logged in user ID from DB
         // Stored in the GLOBAL SESSION

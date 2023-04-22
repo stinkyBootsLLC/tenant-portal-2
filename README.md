@@ -10,6 +10,8 @@ Learning Docker.
 
 Note about the compose yml file: this line is saying, use the files from the **CURRENT DIRECTORY** `app` folder in the containers `/var/www/html` directory. 
 
+the word i mean is mirror
+
 ```
 volumes:
   - "./app:/var/www/html"
@@ -20,6 +22,17 @@ This means YOU MUST have these files locally. **No image has been built yet**
 - 4/21/2023: with current docker-compose.yml file, the application will display correctly, but I cannot log into the app with the CORRECT credentials.  I think there is a problem with permissions.  NOT BEING ABLE TO READ OR WRITE to the SQLite3 DB file.
 
 - 4/21/2023: this is killing everything in container `MYSQLI_ASSOC`
+
+
+Warning: SQLite3Stmt::execute(): Unable to execute statement: attempt to write a readonly database in /var/www/html/tenants/includes/tenantFunctions.php on line 187
+Error: contact admin -- ec-69
+
+chmod 755 -R db
+
+sudo chown www-data .
+
+DOCKER_CONTAINER_ID id
+$ docker exec ca0e3b4bdb8e uid=100(www-data) gid=101(www-data) groups=101(www-data)
 
 
 ## Getting started
