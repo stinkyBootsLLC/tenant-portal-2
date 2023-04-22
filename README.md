@@ -31,7 +31,7 @@ YOU MUST have these files locally. **They are NOT INCLUDED IN THE DOCKER IMAGE**
 
 1. From the root directory run `docker build -t tenant-portal-2-php .`
 
-2. On host machine `chmod 755 -R db`
+2. On host machine `chmod 755 -R app/db`
 
 3. From the root directory run `docker compose up -d` or `docker-compose up -d`
 
