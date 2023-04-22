@@ -4,6 +4,6 @@ services:
   apache-php:
     image: tenant-portal-2-php
     volumes:
-      - "./app:/var/www/html:rw"
+      - "./app:/var/www/html"
     ports:
       - 3010:80

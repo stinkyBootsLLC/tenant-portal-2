@@ -23,16 +23,20 @@ This means YOU MUST have these files locally. **No image has been built yet**
 
 - 4/21/2023: this is killing everything in container `MYSQLI_ASSOC`
 
+- 4/21/2023: In the contatiner I am unable to write to the db
 
-Warning: SQLite3Stmt::execute(): Unable to execute statement: attempt to write a readonly database in /var/www/html/tenants/includes/tenantFunctions.php on line 187
+> Warning: SQLite3Stmt::execute(): Unable to execute statement: attempt to write a readonly database in /var/www/html/tenants/includes/tenantFunctions.php on line 187
 Error: contact admin -- ec-69
 
-chmod 755 -R db
+  Steps taken
+  
+  On host `chmod 755 -R db`
 
-sudo chown www-data .
+  In container `docker exec -it tenant-portal-2-apache-php-1 bash`
 
-DOCKER_CONTAINER_ID id
-$ docker exec ca0e3b4bdb8e uid=100(www-data) gid=101(www-data) groups=101(www-data)
+  `chown -R www-data:www-data /var/www/html` # this is apache on ubuntu
+
+  OUTPUT `-rwxr-xr-x. 1 www-data www-data 36864 Apr 22 15:03 Tenants.sqlite`
 
 
 ## Getting started
