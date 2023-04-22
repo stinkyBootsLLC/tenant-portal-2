@@ -42,16 +42,19 @@ Error: contact admin -- ec-69
 
 ### Docker
 
-Note about the compose yml file: this line is saying, use the files from the **CURRENT DIRECTORY** `app` folder will **MIRROR** in the containers `/var/www/html` directory. 
+Note about the compose yml file: this line is saying, use the files from the **CURRENT DIRECTORY** `app` and **MIRROR** them inside the containers `/var/www/html` directory. 
 
 ```yml
 volumes:
   - "./app:/var/www/html"
 
 ```
-This means YOU MUST have these files locally. **They are NOT IN THE IMAGE**
+This means YOU MUST have these files locally. **They are NOT INCLUDED IN THE IMAGE**
 
 1. from the root directory run `docker build -t tenant-portal-2-php .`
+
+2. from the root directory run `docker compose up -d` (_if using plugin_)
+  - if using docker compose stand alone install then `docker-compose up -d`
 
 
 ## Authors and acknowledgment
