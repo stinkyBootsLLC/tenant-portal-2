@@ -44,7 +44,7 @@ Error: contact admin -- ec-69
 
 Note about the compose yml file: this line is saying, use the files from the **CURRENT DIRECTORY** `app` folder will **MIRROR** in the containers `/var/www/html` directory. 
 
-```shell
+```yml
 volumes:
   - "./app:/var/www/html"
 
