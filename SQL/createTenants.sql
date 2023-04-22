@@ -103,18 +103,12 @@ INSERT INTO Apartments (Apt_number,Apt_City,Apt_State,Apt_Zip,Apt_Mnth_Rent)
 VALUES ('T128', 'Pillow', 'PA',18099, 999.12);
 
 -- populate tenants table
+-- Default Tenant = tenant@mail.com
 -- password = 1234
 INSERT INTO Tenants (TenantEmail, TenantPassword, TenantFirstName,TenantLastName,TenantHomeNumber,TenantMobileNumber,TenantWorkNumber,
                                 TenantAddress_FK,TenantCity_FK,TenantState_FK,TenantZip_FK,TenantAptNum_FK)
 VALUES ('tenant@mail.com','03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4','ed','smith','123-456-7891','123-456-7891','123-456-7891',1,1,1,1,1);
 
-INSERT INTO Tenants (TenantEmail, TenantPassword, TenantFirstName,TenantLastName,TenantHomeNumber,TenantMobileNumber,TenantWorkNumber,
-                                TenantAddress_FK,TenantCity_FK,TenantState_FK,TenantZip_FK,TenantAptNum_FK)
-VALUES ('tenant2@mail.com','03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4','Fran','smith','123-456-7891','123-456-7891','123-456-7891',1,1,1,1,1);
-
-INSERT INTO Tenants (TenantEmail, TenantPassword, TenantFirstName,TenantLastName,TenantHomeNumber,TenantMobileNumber,TenantWorkNumber,
-                                TenantAddress_FK,TenantCity_FK,TenantState_FK,TenantZip_FK,TenantAptNum_FK)
-VALUES ('john@mail.com','03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4','john','doe','123-456-7891','123-456-7891','123-456-7891',2,2,2,2,2);
 
 -- populate TenantSecQuestions table
 INSERT INTO TenantSecQuestions (secquest)VALUES ('In what city were you born');
@@ -168,9 +162,8 @@ INSERT INTO TenantProfiles(Tenant_FK,TenantSecQues1_FK,TenantSecAns1,TenantSecQu
     TenantSecQues3_FK,TenantSecAns3)
 VALUES(3,6,'0db52f4076c082518412afd3dd3576e2cb0c63703fd7fed5e23ade60efef31d9',7,'0db52f4076c082518412afd3dd3576e2cb0c63703fd7fed5e23ade60efef31d9',8,'0db52f4076c082518412afd3dd3576e2cb0c63703fd7fed5e23ade60efef31d9');
 
-
-
 -- populate Maintainers table
+-- Default Maintainer = tenant@mail.com
 -- password = 1234
 INSERT INTO Maintainers (MaintainerEmail,MaintainertPassword,MaintainerFirstName,MaintainerLastName,MaintainerNumber)
 VALUES ('maint@mail.com','03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4','ed','jones','123-456-7891');
@@ -180,8 +173,6 @@ VALUES ('maint@mail.com','03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f9
 INSERT INTO MaintainerProfiles (Maintainer_FK,MaintainerSecQues1_FK,MaintainerSecAns1,MaintainerSecQues2_FK,
 MaintainerSecAns2,MaintainerSecQues3_FK,MaintainerSecAns3)
 VALUES(1,2,'0db52f4076c082518412afd3dd3576e2cb0c63703fd7fed5e23ade60efef31d9',2,'0db52f4076c082518412afd3dd3576e2cb0c63703fd7fed5e23ade60efef31d9',2,'0db52f4076c082518412afd3dd3576e2cb0c63703fd7fed5e23ade60efef31d9');
-
-
 
 -- // how to run from command line
 -- // navigate to working directory
