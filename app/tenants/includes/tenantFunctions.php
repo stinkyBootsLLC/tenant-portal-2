@@ -9,14 +9,8 @@
     function selectTenantInfo($userEmail, $userPassWord){
        // username MUST be an email
         if (filter_var($userEmail, FILTER_VALIDATE_EMAIL)) {
-
-
             
             $hashPassword = hash('sha256', $userPassWord);
-
-
-            echo $userEmail." ".$hashPassword;
-
 
             $db = new SQLite3('../db/Tenants.sqlite');
             $stmt = $db->prepare("SELECT Tenant_ID,TenantEmail, TenantFirstName || ' ' || TenantLastName AS Name,TenantAddress_FK FROM Tenants 
@@ -24,10 +18,7 @@
             $stmt->bindValue(':userEmail', $userEmail, SQLITE3_TEXT);
             $stmt->bindValue(':userPassword', $hashPassword, SQLITE3_TEXT);
             $result = $stmt->execute();
-            $row = $result->fetchArray();//MYSQLI_ASSOC
-
-            
-
+            $row = $result->fetchArray();
             // the very first ID is 1 so 0 does not exist
             if ($row["Tenant_ID"] > 0) {  
 
@@ -50,7 +41,7 @@
                 WHERE  Tenant_FK = :tenantID ");
                 $stmt2->bindValue(':tenantID', $tenantID, SQLITE3_INTEGER);
                 $result2 = $stmt2->execute();
-                $row2 = $result2->fetchArray(); // MYSQLI_ASSOC
+                $row2 = $result2->fetchArray();  
                 // if id is found 
                 if ($row2["TenantProfile_ID"] > 0) { 
                     $secQuest1 = $row2["secQuest1"]."<br>";
@@ -81,7 +72,7 @@
                 // user is NOT in the database table
                 $error = "Your Login e-mail or Password is invalid";
                 /////////////////////////////////////////////////////////////////////////////
-                echo "<h1>WHAT ".$error."</h1>";
+                echo "<h1>".$error."</h1>";
                 // exit out of the functions or everything else witll continue to run
                 exit();
             }
@@ -90,8 +81,6 @@
         // close the DB connection
         $db->close();
     }// end SelectTenantInfo
-
-    
 
     /**
      * Matches input answer to the 3 answers in the 
@@ -112,7 +101,7 @@
         AND TenantSecAns1 = :secretAnswer OR TenantSecAns2 = :secretAnswer OR TenantSecAns3 = :secretAnswer" );
         $stmt->bindValue(':secretAnswer', $secretAnswer, SQLITE3_TEXT);
         $result = $stmt->execute();
-        $row = $result->fetchArray();// MYSQLI_ASSOC
+        $row = $result->fetchArray();
         // if a record is returned
         if ($row["TenantProfile_ID"] > 0){
             // echo "MATCh";
@@ -147,7 +136,7 @@
          WHERE Tenant_ID = :tenantID");
          $stmt->bindValue(':tenantID', $tenantID, SQLITE3_INTEGER);
          $result = $stmt->execute();
-         $row = $result->fetchArray();//MYSQLI_ASSOC
+         $row = $result->fetchArray();
          // if a record is returned
          if ($row["Tenant_ID"] > 0){
             echo"<div class='shadow p-3 mb-5 bg-white rounded'>";
@@ -195,8 +184,8 @@
         $stmt->bindValue(':issueDescription', $issueDescription, SQLITE3_TEXT);
         $stmt->bindValue(':tenantName', $tenantID, SQLITE3_INTEGER);
         $stmt->bindValue(':aptNumber', $tenantID, SQLITE3_INTEGER);
-        $stmt->execute();
-       // $row = $result->fetchArray(MYSQLI_ASSOC);
+        $stmt->execute(); 
+
        if($db->lastInsertRowID() > 0){
             $db->close();
            return true;
@@ -247,7 +236,7 @@
         $stmt = $db->prepare("SELECT Tenant_ID FROM Tenants WHERE tenantEmail = :userEmail");
         $stmt->bindValue(':userEmail', $userEmail, SQLITE3_TEXT);
         $result = $stmt->execute();
-        $row = $result->fetchArray(); // MYSQLI_ASSOC
+        $row = $result->fetchArray();  
         // the very first ID is 1 so 0 does not exist
         if ($row["Tenant_ID"] > 0) { 
             $db->close();
