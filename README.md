@@ -54,7 +54,7 @@ This means YOU MUST have these files locally. **They are NOT INCLUDED IN THE IMA
 1. from the root directory run `docker build -t tenant-portal-2-php .`
 
 2. from the root directory run `docker compose up -d` (_if using plugin_)
-  - if using docker compose stand alone install then `docker-compose up -d`
+   - if using docker compose stand alone install then `docker-compose up -d`
 
 
 ## Authors and acknowledgment
