@@ -9,8 +9,15 @@
     function selectTenantInfo($userEmail, $userPassWord){
        // username MUST be an email
         if (filter_var($userEmail, FILTER_VALIDATE_EMAIL)) {
+
+
             
             $hashPassword = hash('sha256', $userPassWord);
+
+
+            echo $userEmail." ".$hashPassword;
+
+
             $db = new SQLite3('../db/Tenants.sqlite');
             $stmt = $db->prepare("SELECT Tenant_ID,TenantEmail, TenantFirstName || ' ' || TenantLastName AS Name,TenantAddress_FK FROM Tenants 
             WHERE TenantEmail = :userEmail and TenantPassword = :userPassword" );
