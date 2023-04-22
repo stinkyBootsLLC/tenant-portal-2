@@ -24,10 +24,10 @@
             $stmt->bindValue(':userEmail', $userEmail, SQLITE3_TEXT);
             $stmt->bindValue(':userPassword', $hashPassword, SQLITE3_TEXT);
             $result = $stmt->execute();
-            $row = $result->fetchArray(MYSQLI_ASSOC);
+            $row = $result->fetchArray();
 
-            echo $stmt;
-       
+            //MYSQLI_ASSOC
+
             // the very first ID is 1 so 0 does not exist
             if ($row["Tenant_ID"] > 0) {  
 
