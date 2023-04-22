@@ -17,7 +17,7 @@
             $stmt->bindValue(':userEmail', $userEmail, SQLITE3_TEXT);
             $stmt->bindValue(':userPassword', $hashPassword, SQLITE3_TEXT);
             $result = $stmt->execute();
-            $row = $result->fetchArray(MYSQLI_ASSOC);
+            $row = $result->fetchArray();
 
             if ($row["Maintainer_ID"] > 0) { 
 
@@ -40,7 +40,7 @@
                 WHERE  Maintainer_FK  = :maintID ");
                 $stmt2->bindValue(':maintID', $maint_ID, SQLITE3_INTEGER);
                 $result2 = $stmt2->execute();
-                $row2 = $result2->fetchArray(MYSQLI_ASSOC);
+                $row2 = $result2->fetchArray();
                 // if id is found 
                 if ($row2["MaintainerProfile_ID"] > 0) { 
                     $secQuest1 = $row2["secQuest1"]."<br>";
@@ -101,7 +101,7 @@
         AND MaintainerSecAns1 = :secretAnswer OR MaintainerSecAns2 = :secretAnswer OR MaintainerSecAns3 = :secretAnswer" );
         $stmt->bindValue(':secretAnswer', $secretAnswer, SQLITE3_TEXT);
         $result = $stmt->execute();
-        $row = $result->fetchArray(MYSQLI_ASSOC);
+        $row = $result->fetchArray();
         if ($row["MaintainerProfile_ID"] > 0){
             echo "MATCh";
             $db->close();
