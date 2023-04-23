@@ -41,7 +41,7 @@ This is a simple Create, Read, Update, and Delete (CRUD) web application. The pu
 - [Validating and Sanitizing HTML](https://owasp.org/www-project-proactive-controls/v3/en/c5-validate-inputs) - Sanatizes input: Following character will not enter the db `':', '-', '/', '*','=','?'`
   - All input will be filtered by PHP `htmlspecialchars()` to convert special characters to HTML entities
 - Passwords are stored in a Secure Fashion - 'sha256'
-- Proper incorrect credentials error handling - Login e-mail or Password is invalid" [OWASP Authentication](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html#authentication-and-error-messages)
+- Proper incorrect credentials error handling - _Login e-mail or Password is invalid_ [OWASP Authentication](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html#authentication-and-error-messages)
 - Access Control - Session ID Generation and Verification
 - SQL Injection Prevention - Use of Prepared Statements ([with Parameterized Queries](https://www.php.net/manual/en/sqlite3.prepare.php)) 
 
