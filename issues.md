@@ -20,4 +20,4 @@ You basically add the random salt to the end hash. To add a salting mechanism to
 2. Use `password_verify('userInputPlainTextPassword', $storedInDBpasswordHash))` verify that the plain text password matches the hash stored in the DB
 3. If there is a match, then allow entry.
 
-For example the password "1234" hashed with no salt is `$2y$09$NiO0auNuCbW54B2/1k.VKOqCikVyCc0FHHifESHDRfuKt/JaJNaGa`. But with salt the password "1234" is `03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4`
+For example the password "1234" hashed with no salt is `$2y$09$NiO0auNuCbW54B2/1k.VKOqCikVyCc0FHHifESHDRfuKt/JaJNaGa`. But with **salt** the password "1234" is `03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4`
