@@ -86,7 +86,7 @@ YOU MUST have these files locally. **They are NOT INCLUDED IN THE DOCKER IMAGE**
 
 3. Navigate to site URL. For example, if running locally then `http://localhost:3010` or remote `http://my-site:3010` 
 
-4. Login prompt should now be displayed [see demo examaple](https://stinky-boots.online/TenantPortal2/)
+4. Login prompt should now be displayed [see demo example](https://stinky-boots.online/TenantPortal2/)
 
 5. Select tenant and login in as the default tenant `tenant@mail.com` pass=`1234`
 
