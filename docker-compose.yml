@@ -1,9 +1,10 @@
 version: "2.16"
 
 services:
-  # build from current directory
-  build: .
+
   apache-php:
+    # build from current directory
+    build: .
     image: tenant-portal-2-php
     volumes:
       # Persistent data
