@@ -67,7 +67,7 @@ volumes:
 YOU MUST have these files locally. **They are NOT INCLUDED IN THE DOCKER IMAGE**
 
 -->
-1. From the root directory run `docker build -t tenant-portal-2-php .`
+1. From the root directory run `docker build -t tenant-portal-2-php .` **UPDATE:** This step is no loger required, goto step 2
 
 2. From the root directory run `docker compose up -d` or `docker-compose up -d`
 
@@ -102,8 +102,7 @@ Then there is a problem with permission in the db directory
 
 8. Shutdown the container `docker compose down` or `docker-compose down`
 
-Persistent data will be available on the host 
-/var/lib/docker/volumes/tenant-db/Tenants.sqlite
+Persistent data will be available on the host `/var/lib/docker/volumes/tenant-db/Tenants.sqlite`
 
 ## Application Default Credentials
 
