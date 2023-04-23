@@ -92,7 +92,7 @@ YOU MUST have these files locally. **They are NOT INCLUDED IN THE DOCKER IMAGE**
 
 5. Enter Random User Security Question Validation = `'answer'`
 
-6. From the Tenant Dashboard report an issue, or view issues. (there is some dummy data include)
+6. From the Tenant Dashboard report an issue, or view issues. (there is some dummy data included)
 
 - Note: If you receive the following error.
 
