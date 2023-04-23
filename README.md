@@ -98,9 +98,9 @@ YOU MUST have these files locally. **They are NOT INCLUDED IN THE DOCKER IMAGE**
 
 > Warning: SQLite3Stmt::execute(): Unable to execute statement: attempt to write a readonly database in /var/www/html/tenants/includes/tenantFunctions.php on line 187 Error: contact admin -- ec-69
 
-8. Shutdown the container `docker compose down` or `docker-compose down`
-
 Then there is a problem with permission in the db directory
+
+8. Shutdown the container `docker compose down` or `docker-compose down`
 
 ## Application Default Credentials
 
