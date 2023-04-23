@@ -36,7 +36,8 @@ This is a simple Create, Read, Update, and Delete (CRUD) web application. The pu
 ### Security
 
 - Proper Password Strength Controls - Passwords for users must be 1 lower case, 1 upper case letter, 1 number and 1 special character and at least 8 characters in length
-- [C5: Validate All Inputs](https://owasp.org/www-project-proactive-controls/v3/en/c5-validate-inputs) - Sanatizes input: Following character will not enter the db `':', '-', '/', '*','=','?'`
+- [Validating and Sanitizing HTML](https://owasp.org/www-project-proactive-controls/v3/en/c5-validate-inputs) - Sanatizes input: Following character will not enter the db `':', '-', '/', '*','=','?'`
+  - All input will be filtered by PHP `htmlspecialchars()` to convert special characters to HTML entities
 - Passwords are stored in a Secure Fashion - 'sha256'
 - Proper incorrect credentials error handling - Login e-mail or Password is invalid" [OWASP AUTHENTICACION](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html#authentication-and-error-messages)
 - Access Control - Session ID Generation and Verification
