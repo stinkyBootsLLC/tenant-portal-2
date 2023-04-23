@@ -67,9 +67,9 @@ volumes:
 YOU MUST have these files locally. **They are NOT INCLUDED IN THE DOCKER IMAGE**
 
 -->
-1. From the root directory run `docker build -t tenant-portal-2-php .` **UPDATE:** This step is no loger required, goto step 2
+**UPDATE:** This step is no loger required -> From the root directory run `docker build -t tenant-portal-2-php .` 
 
-2. From the root directory run `docker compose up -d` or `docker-compose up -d`
+1. From the root directory run `docker compose up -d` or `docker-compose up -d`
 
 <!--
 4. Port into the running container `docker exec -it tenant-portal-2-apache-php-1 bash` 
@@ -84,15 +84,15 @@ YOU MUST have these files locally. **They are NOT INCLUDED IN THE DOCKER IMAGE**
 7. Restart the container `docker compose up -d` or `docker-compose up -d`
 -->
 
-3. Navigate to site URL. For example, if running locally then `http://localhost:3010` or remote `http://my-site:3010` 
+2. Navigate to site URL. For example, if running locally then `http://localhost:3010` or remote `http://my-site:3010` 
 
-4. Login prompt should now be displayed [see demo example](https://stinky-boots.online/TenantPortal2/)
+3. Login prompt should now be displayed [see demo example](https://stinky-boots.online/TenantPortal2/)
 
-5. Select tenant and login in as the default tenant `tenant@mail.com` pass=`1234`
+4. Select tenant and login in as the default tenant `tenant@mail.com` pass=`1234`
 
-6. Enter Random User Security Question Validation = `'answer'`
+5. Enter Random User Security Question Validation = `'answer'`
 
-7. From the Tenant Dashboard report an issue, or view issues. (there is some dummy data include)
+6. From the Tenant Dashboard report an issue, or view issues. (there is some dummy data include)
 
 - Note: If you receive the following error.
 
@@ -100,7 +100,7 @@ YOU MUST have these files locally. **They are NOT INCLUDED IN THE DOCKER IMAGE**
 
 Then there is a problem with permission in the db directory
 
-8. Shutdown the container `docker compose down` or `docker-compose down`
+7. Shutdown the container `docker compose down` or `docker-compose down`
 
 Persistent data will be available on the host `/var/lib/docker/volumes/tenant-db/Tenants.sqlite`
 
