@@ -102,6 +102,9 @@ Then there is a problem with permission in the db directory
 
 8. Shutdown the container `docker compose down` or `docker-compose down`
 
+Persistent data will be available on the host 
+/var/lib/docker/volumes/tenant-db/Tenants.sqlite
+
 ## Application Default Credentials
 
 **Tenant:** tenant@mail.com  
