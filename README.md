@@ -2,10 +2,9 @@
 
 PHP (CRUD) web application to track maintenance issues for a property manager. The original MySQL version is now converted to a SQLite Version.
 
-This is a simple Create, Read, Update, and Delete (CRUD) web application. The purpose of this application, is to track maintenance issues for a property manager. Tenants can register to this application and report simple maintenance issues, up to the property manager.There is a login form for a tenant and a login form for a maintainer (manager). Once the maintainer logs in, they will be able to see all the issues reported by their Tenants. Issues are categorized in three categories, open, pending and closed.
+This is a simple Create, Read, Update, and Delete (CRUD) web application. The purpose of this application, is to track maintenance issues for a property manager. Tenants can register to this application and report simple maintenance issues, up to the property manager.There is a login form for a tenant and a login form for a maintainer (manager). Once the maintainer logs in, they will be able to see all the issues reported by their Tenants. Issues are categorized in three categories, open, pending and closed. Built in 2018 for school project.
 
 > :warning: This application is intended for academic purpose only and should not be used in a live production enviroment.
-
 
 ## Software Architecture
 
@@ -13,11 +12,40 @@ This is a simple Create, Read, Update, and Delete (CRUD) web application. The pu
 - Apache HTTP Server (latest)
 - DB: SQLite3 
 
+## Features
+
+### Registration
+
+- User self registration for access
+
+### Tenant Reporting Dashboard
+
+- Report maintenance issue
+- View open and Pending issues
+- View issue history
+
+### Maintenance Viewing Dashboard
+
+- Visualization of all ongoing tenant issues
+- View recently added tenant maintenance issues
+- View pending issues with scheduled repair dates
+- View closed issues with completed repaired dates (history)
+- Update issue status
+
+### Security
+
+- Proper Password Strength Controls - Passwords for users must be 1 lower case, 1 upper case letter, 1 number and 1 special character and at least 8 characters in length
+- Input validation for all form fields
+- Passwords are stored in a Secure Fashion - 'sha256'
+- Proper incorrect credentials error handling - Login e-mail or Password is invalid" [OWASP AUTHENTICACION](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html#authentication-and-error-messages)
+- Access Control - Session ID Generation and Verification
+- SQL Injection Prevention - Use of Prepared Statements ([with Parameterized Queries](https://www.php.net/manual/en/sqlite3.prepare.php)) 
+
 ## Installation
 
 1. Clone this project
 
-## Deploy
+## Deployment
 
 ### 1 - Standard Deployment
 
