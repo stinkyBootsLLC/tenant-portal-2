@@ -2,7 +2,7 @@ version: "2.16"
 
 services:
   # build from current directory
-  build: .
+  build: ./tenant-portal-2-php
   apache-php:
     image: tenant-portal-2-php
     volumes:
