@@ -12,9 +12,9 @@ This is a simple Create, Read, Update, and Delete (CRUD) web application. The pu
 - Apache HTTP Server (latest)
 - DB: SQLite3 
 
-## Features
+## Functional Features
 
-### Registration
+### Registration Form
 
 - User self registration for access
 
@@ -33,7 +33,9 @@ This is a simple Create, Read, Update, and Delete (CRUD) web application. The pu
 - Update issue status
 - View all registered users
 
-### Security
+## Non Functional Features
+
+### Security Controls
 
 - Proper Password Strength Controls - Passwords for users must be 1 lower case, 1 upper case letter, 1 number and 1 special character and at least 8 characters in length
 - [Validating and Sanitizing HTML](https://owasp.org/www-project-proactive-controls/v3/en/c5-validate-inputs) - Sanatizes input: Following character will not enter the db `':', '-', '/', '*','=','?'`
