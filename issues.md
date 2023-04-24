@@ -6,7 +6,11 @@ As is, the Tenant app is a minimal viable working solution; however, this app wa
 
 ### Application is Vulnerable to Brute Force Attacks
 
-This application has no lockout mechanism in place.
+This application has no lockout mechanism in place. An attacker could easily automate multiple passwords from a dictionary or other source against a single account. The applications should enforce a limit of [insert number] consecutive invalid logon attempts by a user  and uutomatically lock the account or node for an [insert time]
+period. Account lockout mechanisms are used to mitigate brute force password guessing attacks. 
+
+- See NIST Control [AC-7 UNSUCCESSFUL LOGON ATTEMPTS](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final)
+- See OWASP [Testing for Weak Lock Out Mechanism](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/04-Authentication_Testing/03-Testing_for_Weak_Lock_Out_Mechanism)
 
 ### Passwords are not salted.
 
