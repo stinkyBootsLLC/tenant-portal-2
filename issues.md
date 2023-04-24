@@ -43,7 +43,7 @@ While there is a second secret question asked after a successful login, a two-Fa
 
 > Multi-Factor authentication (MFA), or Two-Factor Authentication (2FA) is when a user is required to present more than one type of evidence in order to authenticate on a system. [(Multi-Factor Authentication Cheat Sheet)](https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html)
 
-See [IA-2 IDENTIFICATION AND AUTHENTICATION (ORGANIZATIONAL USERS)](https://csrc.nist.gov/Projects/risk-management/sp800-53-controls/release-search#/control?version=5.1&number=IA-2)
+See NIST [IA-2 IDENTIFICATION AND AUTHENTICATION (ORGANIZATIONAL USERS)](https://csrc.nist.gov/Projects/risk-management/sp800-53-controls/release-search#/control?version=5.1&number=IA-2)
 
 
 
