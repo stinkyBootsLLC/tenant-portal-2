@@ -104,6 +104,8 @@ Then there is a problem with permission in the db directory
 
 Persistent data will be available on the host `/var/lib/docker/volumes/tenant-db/Tenants.sqlite`
 
+After the container is up and running, unless you plan on modifying the source code, you are free to remove all of these files. If you modify the source code, you will have to rebuild the image to see the changes. Recommend keeping `docker-compose.yml` for spinning up the container.
+
 ## Application Default Credentials
 
 **Tenant:** tenant@mail.com  
@@ -114,8 +116,9 @@ Persistent data will be available on the host `/var/lib/docker/volumes/tenant-db
 
 ## License
 
-For open source projects, say how it is licensed.
+> THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 
 ## Project status
 
-Project still is Work in progress (WIP). My final goal is to have this a fully running image available on docker hub.
+I will no longer be working on this project.
