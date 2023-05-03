@@ -38,8 +38,8 @@ This is a simple Create, Read, Update, and Delete (CRUD) web application. The pu
 ### Security Controls
 
 - Proper Password Strength Controls - Passwords for users must be 1 lower case, 1 upper case letter, 1 number and 1 special character and at least 8 characters in length
-- [Validating and Sanitizing HTML](https://owasp.org/www-project-proactive-controls/v3/en/c5-validate-inputs) - Sanatizes input: Following character will not enter the db `':', '-', '/', '*','=','?'`
-  - All input will be filtered by PHP `htmlspecialchars()` to convert special characters to HTML entities
+- [Validating and Sanitizing HTML](https://owasp.org/www-project-proactive-controls/v3/en/c5-validate-inputs) - Sanatizes input: Following characters will not enter the db `':', '-', '/', '*','=','?'`
+  - All input is filtered by PHP `htmlspecialchars()` to convert special characters to HTML entities
 - Passwords are stored in a Secure Fashion - 'sha256'
 - Proper incorrect credentials error handling - _Login e-mail or Password is invalid_ [OWASP Authentication](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html#authentication-and-error-messages)
 - Access Control - Session ID Generation and Verification
@@ -104,6 +104,8 @@ Then there is a problem with permission in the db directory
 
 Persistent data will be available on the host `/var/lib/docker/volumes/tenant-db/Tenants.sqlite`
 
+After the container is up and running, unless you plan on modifying the source code, you are free to remove all of these files. If you modify the source code, you will have to rebuild the image to see the changes. Recommend keeping `docker-compose.yml` for spinning up the container.
+
 ## Application Default Credentials
 
 **Tenant:** tenant@mail.com  
@@ -114,8 +116,9 @@ Persistent data will be available on the host `/var/lib/docker/volumes/tenant-db
 
 ## License
 
-For open source projects, say how it is licensed.
+> THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 
 ## Project status
 
-Project still is Work in progress (WIP). My final goal is to have this a fully running image available on docker hub.
+I will no longer be working on this project.
