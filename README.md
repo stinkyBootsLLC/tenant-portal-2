@@ -121,4 +121,4 @@ After the container is up and running, unless you plan on modifying the source c
 
 ## Project status
 
-I will no longer be working on this project.
+This project is complete and I will no longer be working on this project.
