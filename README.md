@@ -66,8 +66,8 @@ volumes:
 ```
 YOU MUST have these files locally. **They are NOT INCLUDED IN THE DOCKER IMAGE**
 
--->
 **UPDATE:** This step is no loger required -> From the root directory run `docker build -t tenant-portal-2-php .` 
+-->
 
 1. From the root directory run `docker compose up -d` or `docker-compose up -d`
 
