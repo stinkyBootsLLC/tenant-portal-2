@@ -1,8 +1,14 @@
 # Tenant Portal 2
 
-PHP (CRUD) web application to track maintenance issues for a property manager. The original MySQL version is now converted to a SQLite Version.
+## About
 
-This is a simple Create, Read, Update, and Delete (CRUD) web application. The purpose of this application, is to track maintenance issues for a property manager. Tenants can register to this application and report simple maintenance issues, up to the property manager.There is a login form for a tenant and a login form for a maintainer (manager). Once the maintainer logs in, they will be able to see all the issues reported by their Tenants. Issues are categorized in three categories, open, pending and closed. Built in 2018 for school project.
+PHP web application to track property maintenance issues. This is a simple Create, Read, Update, and Delete (CRUD) web application. The purpose of this application, is for a property manager to track maintenance issues. Tenants can register to this application and report simple maintenance issues, up to the property manager. There is a login form for a tenant and a login form for a maintainer (manager). Once the maintainer logs in, they will be able to see all the issues reported by their tenants. Issues are categorized in three categories, open, pending and closed. 
+
+- Open - issue reported, but NOT scheduled for repair
+- Pending - issue IS scheduled for repaired
+- Closed - issue HAS BEEN repaired (history)
+
+Built in 2018 for school project. The original MySQL version is now converted to a lightweight SQLite Version.
 
 > :warning: This application is intended for academic purpose only and should not be used in a live production enviroment. See [Issues](issues.md)
 
